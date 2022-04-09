@@ -56,3 +56,38 @@ cfg.merge_from_file(model_zoo.get_config_file("COCO-InstanceSegmentation/mask_rc
 			# im = cv2.imread("./input.jpg")
 			
 			im = cv2.imread("./pexels-kaique-rocha-109919.jpg")
+			
+
+Detectron2 Custom Training
+===================================
+
+Mediapipe - Google's project : https://google.github.io/mediapipe/solutions/solutions.html
+
+
+1 . Downloading files :  https://drive.google.com/drive/folders/1pW4D--yW-Yt01lbJ97aIcp1jXmAYWtsm
+
+2 . Create a "detectron2" folder in Google Drive and place all the downloaded files .
+
+3 . Right click on "Custom_Training_Detectron2_(1).ipynb" file -> Open with -> Google Collaboratory .
+
+4 . Change run time to "GPU". 
+
+5 . Skip first 2 lines of  code in the file and copy paste new lines of codes and run that .
+
+6 . In below code , you can choose the model of your choice : 
+
+	- cfg.merge_from_file(model_zoo.get_config_file("COCO-Detection/faster_rcnn_R_50_FPN_3x.yaml"))
+	
+7 . ** Open "/content/drive/MyDrive/detectron2/data_detectron2/output.json" in JSON URL : http://jsonviewer.stack.hu/
+
+8 . ** CVAT ( https://cvat.org/) : mypython1.pradhan@gmail.com . mypython / Katapali1 	
+
+9 . You can give more number of epochs to get better result .
+
+** The above steps are for Object Detection . If you want to do for Segmentaion
+
+	- Change the dataset
+	
+	- Do the annotation from Scratch .
+	
+	- Change the model name ( .yaml file )
