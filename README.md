@@ -19,26 +19,40 @@ COCO Object Detection baseline : https://github.com/facebookresearch/detectron2/
 		
 2 ) 
 -- import some common detectron2 utilities
-from detectron2 import model_zoo  # https://github.com/facebookresearch/detectron2/blob/main/MODEL_ZOO.md
-from detectron2.engine import DefaultPredictor # 
-from detectron2.config import get_cfg  # https://github.com/facebookresearch/detectron2/tree/main/configs , based on Developer's requirement .
-from detectron2.utils.visualizer import Visualizer
-from detectron2.data import MetadataCatalog, DatasetCatalog  # Annotations and Images respectively .
+
+	from detectron2 import model_zoo  # https://github.com/facebookresearch/detectron2/blob/main/MODEL_ZOO.md
+
+	from detectron2.engine import DefaultPredictor # 
+
+	from detectron2.config import get_cfg  # https://github.com/facebookresearch/detectron2/tree/main/configs , based on Developer's requirement .
+
+	from detectron2.utils.visualizer import Visualizer
+
+	from detectron2.data import MetadataCatalog, DatasetCatalog  # Annotations and Images respectively .
 
 
 
 
 3 ) 
 cfg.merge_from_file(model_zoo.get_config_file("COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml")) 
+
 	- you can change the above with "COCO-Detection/faster_rcnn_R_50_FPN_3x.yaml" 
+	
 	- ** Ref # https://github.com/facebookresearch/detectron2/blob/main/configs/COCO-Detection/faster_rcnn_R_50_FPN_3x.yaml
+	
 	- ** We are trying to do "Object Detection" here ( Not Segmentaion as like the above one ) .
+	
 	- you can change again with "COCO-Detection/faster_rcnn_R_101_C4_3x.yaml"
+	
 	- ** Ref # https://github.com/facebookresearch/detectron2/blob/main/configs/COCO-Detection/faster_rcnn_R_101_C4_3x.yaml
 	
 4 ) Check with another .jpg file .
 		- Download any .jpg file from pixel.com
+		
 		- Upload to Google Drive ( By doing upload to session storage in Google Colab )
+		
 		- Change the .jpg filename as below
+		
 			# im = cv2.imread("./input.jpg")
+			
 			im = cv2.imread("./pexels-kaique-rocha-109919.jpg")
